@@ -12,9 +12,11 @@
 }
 
 .main {
-    width: 260px;
-    height: 530px;
+    min-width: 260px;
+    min-height: 530px;
+    max-width: 260px;
+    max-height: 530px;
     border: 7px solid black;
-    background: url('./public/images/2.jpg') center/cover;
+    background-color: #9c45df;
     border-radius: 30px;
 }
