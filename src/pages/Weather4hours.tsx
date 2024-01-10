@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { FaHome, FaList, FaSearch } from "react-icons/fa";
+// import { FaHome, FaList, FaSearch } from "react-icons/fa";
 import { WiDegrees } from "react-icons/wi";
 import moment from "moment";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 interface IFourweather {
   location: {
     name: string;
@@ -86,7 +86,7 @@ const Weather4hours = () => {
           );
         })}
       </div>
-      <div className="mt-12">
+      {/* <div className="mt-12">
         <div className="flex gap-20 p-3 text-white text-[20px]">
           <Link to={"/WeatherApp/home"}>
             <FaHome />
@@ -98,7 +98,7 @@ const Weather4hours = () => {
             <FaList />
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
