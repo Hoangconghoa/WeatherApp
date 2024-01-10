@@ -8,7 +8,7 @@ const App = () => {
     <div className="w-screen h-screen flex justify-center items-center bg-[#7FFFD4] ">
       <BrowserRouter>
         <Routes>
-          <Route path="WeatherDN/" element={<DefaultLayout />}>
+          <Route path="WeatherApp/" element={<DefaultLayout />}>
             <Route index element={<CurrenWeather />} />
             <Route path="home" element={<CurrenWeather />} />
             <Route path="search" element={<FivedayWeather />} />

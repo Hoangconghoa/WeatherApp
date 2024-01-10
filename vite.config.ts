@@ -9,5 +9,5 @@ export default defineConfig({
   },
   publicDir: "public",
   plugins: [react()],
-  base: "/WeatherDN",
+  base: "/WeatherApp",
 });
