@@ -55,7 +55,7 @@ const Weather4hours = () => {
       <div className="flex gap-4 p-2 ">
         {data.map((h) => {
           return (
-            <div className="rounded-3xl py-2 text-[14px] text-center">
+            <div key={h} className="rounded-3xl py-2 text-[14px] text-center">
               <p>{h > 12 ? h - 12 + "PM" : h + "AM"}</p>
               <p>
                 {fourWeather && (
@@ -88,13 +88,13 @@ const Weather4hours = () => {
       </div>
       <div className="absolute bottom-0 mb-8">
         <div className="flex gap-20 p-3 text-white text-[20px]">
-          <Link to={"/WeatherApp/home"}>
+          <Link to={"/WeatherDN/home"}>
             <FaHome />
           </Link>
-          <Link to={"/WeatherApp/search"}>
+          <Link to={"/WeatherDN/search"}>
             <FaSearch />
           </Link>
-          <Link to={"/WeatherApp/search"}>
+          <Link to={"/WeatherDN/search"}>
             <FaList />
           </Link>
         </div>
