@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @layer base {
+    input {
+        @apply border rounded px-2;
+    }
+
+    .btn {
+        @apply bg-slate-300 hover: bg-slate-200 p-3 text-slate-800 font-bold rounded;
+    }
+
+    table, tr, td {
+        @apply border-b-2 border-slate-500
+    }
+}
+
+@layer components {
+    .btn_primary {
+        @apply bg-indigo-600 hover: bg-indigo-500 px-3 text-white font-bold rounded;
+    }
+} */

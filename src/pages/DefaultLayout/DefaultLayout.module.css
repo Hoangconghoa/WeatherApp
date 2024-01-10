@@ -1,0 +1,18 @@
+.weather {
+    width: 275px;
+    height: 545px;
+    background-color: plum;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px;
+}
+
+.main {
+    width: 260px;
+    height: 530px;
+    border: 7px solid black;
+    background: url('./public/images/2.jpg') center/cover;
+    border-radius: 30px;
+}
