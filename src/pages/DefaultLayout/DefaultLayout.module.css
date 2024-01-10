@@ -1,6 +1,8 @@
 .weather {
-    width: 275px;
-    height: 545px;
+    min-width: 275px;
+    min-height: 545px;
+    max-width: 275px;
+    max-height: 545px;
     background-color: plum;
     border-radius: 30px;
     display: flex;
@@ -15,4 +17,5 @@
     border: 7px solid black;
     background: url('./public/images/2.jpg') center/cover;
     border-radius: 30px;
+    z-index: 1;
 }

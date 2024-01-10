@@ -88,13 +88,13 @@ const Weather4hours = () => {
       </div>
       <div className="absolute bottom-0 mb-8">
         <div className="flex gap-20 p-3 text-white text-[20px]">
-          <Link to={"/home"}>
+          <Link to={"/WeatherApp/home"}>
             <FaHome />
           </Link>
-          <Link to={"/search"}>
+          <Link to={"/WeatherApp/search"}>
             <FaSearch />
           </Link>
-          <Link to={"/search"}>
+          <Link to={"/WeatherApp/search"}>
             <FaList />
           </Link>
         </div>

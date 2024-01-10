@@ -8,7 +8,7 @@ const DefaultLayout = () => {
       <div className={styles.main}>
         <Header />
 
-        <main className="container text-white">
+        <main className="container text-white z-10">
           {/* Nội dung các trang sẽ load lên ở đây */}
           <Outlet />
         </main>

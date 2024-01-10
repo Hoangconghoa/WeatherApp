@@ -52,7 +52,7 @@ const FivedayWeather = () => {
       <div className="flex justify-between items-center p-2">
         <div className="flex gap-2">
           <div>
-            <Link to={"/home"}>
+            <Link to={"/WeatherApp/home"}>
               <FaChevronLeft />
             </Link>
           </div>
