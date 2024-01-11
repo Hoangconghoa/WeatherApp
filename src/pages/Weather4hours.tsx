@@ -56,8 +56,8 @@ const Weather4hours = () => {
         {data.map((h) => {
           return (
             <div key={h} className="rounded-3xl text-[14px] text-center">
-              <p>{h > 12 ? h - 12 + "PM" : h + "AM"}</p>
-              <p>
+              <div>{h > 12 ? h - 12 + "PM" : h + "AM"}</div>
+              <div>
                 {fourWeather && (
                   <img
                     src={
@@ -68,20 +68,20 @@ const Weather4hours = () => {
                     alt=""
                   />
                 )}
-              </p>
-              <p className="flex pt-2">
-                <p className="pl-2">
+              </div>
+              <div className="flex pt-2">
+                <div className="pl-2">
                   {" "}
                   {fourWeather &&
                     fourWeather.forecast.forecastday[0].hour[h].temp_c.toFixed(
                       0
                     )}
-                </p>
+                </div>
 
-                <p className="text-[25px] ml-[-10px]">
+                <div className="text-[25px] ml-[-10px]">
                   <WiDegrees />
-                </p>
-              </p>
+                </div>
+              </div>
             </div>
           );
         })}
@@ -94,7 +94,7 @@ const Weather4hours = () => {
           <Link to={"/WeatherApp/search"}>
             <FaSearch />
           </Link>
-          <Link to={"/WeatherApp/search"}>
+          <Link to={"/WeatherApp/fiveday"}>
             <FaList />
           </Link>
         </div>

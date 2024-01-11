@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { FaChevronLeft, FaEllipsisV, FaSearch } from "react-icons/fa";
+import { FaChevronLeft, FaEllipsisV } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { WiDegrees } from "react-icons/wi";
 import moment from "moment";
@@ -28,13 +28,12 @@ const FivedayWeather = () => {
   const [fiveDayWeather, setFiveDayWeather] = useState<IFiveDayWeather | null>(
     null
   );
-  const [city, setCity] = useState("DaNang");
-  const [search, setSearch] = useState("");
+
   useEffect(() => {
     try {
       const featchData = async () => {
         const response = await axios.get(
-          `https://api.weatherapi.com/v1/forecast.json?key=c9a0ca46550648b29ce125849232709&q=${city}&days=5&aqi=no&alerts=no&lang=vi`
+          `https://api.weatherapi.com/v1/forecast.json?key=c9a0ca46550648b29ce125849232709&q=Danang&days=5&aqi=no&alerts=no&lang=vi`
         );
         setFiveDayWeather(response.data);
       };
@@ -42,7 +41,7 @@ const FivedayWeather = () => {
     } catch (error) {
       console.log(error);
     }
-  }, [city]);
+  }, []);
   const date = [0, 1, 2];
   const currenDate = new Date();
 
@@ -56,36 +55,18 @@ const FivedayWeather = () => {
               <FaChevronLeft />
             </Link>
           </div>
-          <div className="">Weather</div>
+          <div className="">
+            {fiveDayWeather && fiveDayWeather.location.name}
+          </div>
         </div>
         <div>
           <FaEllipsisV />
         </div>
       </div>
-      <div className="Search flex justify-center items-center mb-5">
-        <input
-          type="text"
-          size={25}
-          onChange={(e) => {
-            setSearch(e.target.value);
-          }}
-          className="px-2 py-1 rounded mr-[-20px] text-[14px] outline-0 text-slate-900"
-          placeholder="Search for a city..."
-          required
-        />
-        <button
-          className="py-1 text-slate-600"
-          onClick={() => {
-            setCity(search);
-          }}
-        >
-          <FaSearch />
-        </button>
-      </div>
       <div>
         {date.map((x) => {
           return (
-            <div className="bg-[#48309D] rounded-xl mb-5 p-3">
+            <div key={x} className="bg-[#48309D] rounded-xl mb-5 p-3">
               <div className="flex justify-between">
                 <div className="flex">
                   <div className="text-[30px] font-medium mr-[-15px]">

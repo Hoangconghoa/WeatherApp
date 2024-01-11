@@ -37,21 +37,21 @@ const CurrenWeather = () => {
   return (
     <>
       <div className="curren text-center ">
-        <p className="name text-[35px]">
+        <div className="name text-[35px]">
           {currenWeather && currenWeather.location.name}
-        </p>
-        <p className="temp flex px-20">
-          <p className="text-[50px] ">
+        </div>
+        <div className="temp flex px-20">
+          <div className="text-[50px] ">
             {(currenWeather && currenWeather.current.temp_c)?.toFixed(0)}
-          </p>
+          </div>
 
-          <p className="text-[90px]  ml-[-30px] mt-[-5px] font-bold">
+          <div className="text-[90px]  ml-[-30px] mt-[-5px] font-bold">
             <WiDegrees />
-          </p>
-        </p>
-        <p className="condition text-gray-300 italic">
+          </div>
+        </div>
+        <div className="condition text-gray-300 italic">
           {currenWeather && currenWeather.current.condition.text}
-        </p>
+        </div>
       </div>
       <Weather4hours />
     </>
